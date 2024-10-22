@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "anki-wiktionary"
+version = "1.0.0"
+description = "English-Deutsch (Sorted by Frequency)"
+authors = ["Ken Sible <ksible@outlook.com>"]
+license = "MIT License"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+wiktionary-de-parser = "0.9.5"
+ordered-set = "^4.1.0"
+tqdm = "^4.66.5"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.10.0"
+ruff = "^0.7.0"
+mypy = "^1.12.0"
+
+[tool.black]
+skip-string-normalization = true
+line-length = 100
+
+[tool.ruff]
+extend-select = ["I"]
+line-length = 100
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
